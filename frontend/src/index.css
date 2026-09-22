@@ -1,0 +1,232 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --border: #d9dce1;
+  --text: #1f2328;
+  --muted: #6b7280;
+  --accent: #2f6f4f;
+  --accent-text: #ffffff;
+  --error: #b42318;
+  --error-bg: #fdf3f2;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.app__header h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.app__header p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.calculator {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+/* Display */
+
+.display {
+  min-height: 76px;
+  padding: 12px 16px;
+  background: #fbfbfc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  word-break: break-all;
+}
+
+.display--error {
+  background: var(--error-bg);
+  border-color: #f3c4c0;
+  color: var(--error);
+  align-items: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.display__placeholder {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.display__expression {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.display__value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Operation pad */
+
+.pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 16px 0 8px;
+}
+
+.pad__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.pad__button:hover:not(:disabled) {
+  border-color: #b9bec6;
+}
+
+.pad__button[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.pad__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.pad__symbol {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.pad__label {
+  font-size: 0.7rem;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.calculator__hint {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Fields */
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field__label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.field__input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.field__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.button {
+  flex: 1;
+  padding: 11px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #b9bec6;
+}
+
+.button--primary {
+  flex: 2;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+@media (max-width: 420px) {
+  .app {
+    padding: 20px 12px 32px;
+  }
+
+  .pad {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .display__value {
+    font-size: 1.5rem;
+  }
+}

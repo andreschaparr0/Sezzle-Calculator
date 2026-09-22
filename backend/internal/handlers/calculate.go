@@ -10,8 +10,8 @@ import (
 	"math"
 	"net/http"
 
-	"https://github.com/andreschaparr0/Sezzle-Calculator/backend/internal/calculator"
-	"https://github.com/andreschaparr0/Sezzle-Calculator/backend/internal/httpx"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/calculator"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/httpx"
 )
 
 // CalculateRequest is the JSON body accepted by POST /api/calculate.

@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"https://github.com/andreschaparr0/Sezzle-Calculator/backend/internal/httpx"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/httpx"
 )
 
 // HandleHealth handles GET /health. It's a standard liveness/readiness

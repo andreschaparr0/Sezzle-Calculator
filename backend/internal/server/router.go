@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"https://github.com/andreschaparr0/Sezzle-Calculator/backend/internal/handlers"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/handlers"
 )
 
 // Config controls router behavior that varies between environments.

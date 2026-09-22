@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/sezzle-calculator/backend/internal/server"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/server"
 )
 
 func main() {

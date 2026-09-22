@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"https://github.com/andreschaparr0/Sezzle-Calculator/backend/internal/calculator"
+	"github.com/andreschaparr0/Sezzle-Calculator/backend/internal/calculator"
 )
 
 // doCalculateRequest is a small test helper that POSTs the given raw JSON

@@ -1,0 +1,10 @@
+# Build output
+/calc-server
+/bin/
+
+# Test artifacts
+*.out
+coverage.html
+
+# Editor/OS
+.DS_Store

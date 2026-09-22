@@ -11,7 +11,7 @@ type Operation string
 
 // Supported operations. Add/Subtract/Multiply/Divide are the required
 // "basic" operations; Power/Sqrt/Percentage are the "advanced" ones called
-// out as optional in the assignment
+// out as optional in the  assignment
 const (
 	Add        Operation = "add"
 	Subtract   Operation = "subtract"
